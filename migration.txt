@@ -1,0 +1,10 @@
+SELECT setval(pg_get_serial_sequence( 'menus','id' ),COALESCE( MAX(id),0)+1,false)FROM menus;
+
+
+php artisan migrate --path=database/migrations/20240624
+php artisan migrate --path=database/migrations/20240627
+
+
+ return redirect(url('roles'))->with(['alert-type' => 'success', 'message' => Lang::get('roles.role_insert_message')]);
+            DB::rollback();
+            return redirect()->back()->with(['alert-type' => 'error', 'message' => Lang::get('message.commons.technicalError')]);

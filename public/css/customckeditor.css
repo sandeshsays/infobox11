@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Kalimati";
+    src: url("../fonts/Kalimati.ttf") format("truetype");
+    src: local("Kalimati"), url("../fonts/Kalimati.ttf") format("truetype");
+
+}
+
+/* .h-card { */
+
+    /* background-color: #3c8dbc;
+    color: #fff;
+    border-radius:4px; */
+
+    /* margin: 5px; */
+    /* padding: 5px; */
+
+/* } */
+
+/* .cke_editable { min-height:400px;} */

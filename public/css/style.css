@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "Kalimati";
+    src: url("../fonts/Kalimati.ttf") format("truetype");
+    src: local("Kalimati"), url("../fonts/Kalimati.ttf") format("truetype");
+}
+
+.f-kalimati {
+    font-family: "Kalimati";
+}
+.f-arial {
+    font-family: "Helvetica";
+}
+table > thead {
+    background-color: #3498db;
+    color: white;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 72px;
+    height: 30px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+}
+.slider:before {
+    position: absolute;
+    content: "NP";
+    height: 28px;
+    width: 30px;
+    left: 2px;
+        /* background: linear-gradient(to bottom, #b22234 0%, #b22234 13.63%, white 13.63%, white 27.27%, #b22234 27.27%, #b22234 40.9%, white 40.9%, white 54.54%, #b22234 54.54%, #b22234 68.18%, white 68.18%, white 81.81%, #b22234 81.81%, #b22234 95.45%, white 95.45%, white 100%);
+    background: linear-gradient( to right, #DC0021 0%, #DC0021 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #002867 66.66%, #002867 100%); */
+    /* bottom: 2px; */
+    /* background-color: #3498db; */
+    background: linear-gradient(to right, #ca001f 0%, #003385 50%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    border-radius: 6px;
+}
+input:checked + .slider {
+    background-color: #ddd;
+}
+input:checked + .slider:before {
+    transform: translateX(38px);
+    content: "EN";
+   
+}
+.slider.round {
+    border-radius: 16px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+/* .labels {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    padding: 0 10px;
+    color: black;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+} */
+.horizontal-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: black;
+    transform: translateX(-50%);
+}
+
+body {
+    font-family: "kalimati";
+    src: url("../fonts/Kalimati.ttf") format("truetype");
+    src: local("Kalimati"), url("../fonts/Kalimati.ttf") format("truetype");
+}
+
+.table-bordered,
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+    border-color: #1a1717 !important;
+}
+
+.pagination {
+    float: right;
+}
+.dt-search {
+    float: right;
+}
+@media print {
+    table, table tr, table td {
+        border-top: #000 solid 1px;
+        border-bottom: #000 solid 1px;
+        border-left: #000 solid 1px;
+        border-right: #000 solid 1px;
+    }
+} 
+
+.buttons-copy{
+    background-color: rgb(50, 176, 230) !important;
+    color:white !important
+
+}
+.buttons-excel{
+    background-color: rgb(54, 240, 54) !important;
+    color:white !important
+
+}
+.buttons-colvis{
+    background-color: rgb(14, 206, 196) !important;
+    color:white !important
+
+}
+.buttons-print{
+    background-color: rgb(99, 99, 235) !important;
+    color:white !important
+
+}
+.pull-right{
+    float: right !important;
+}
+
+/* //select 2 */
+
+.select2-container--default .select2-selection--single {
+    height: 38px !important; /* Adjust based on your form-control height */
+    border: 1px solid #ced4da; /* Ensure the border matches your form-control */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 38px !important; /* Adjust based on your form-control height */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 38px !important; /* Adjust based on your form-control height */
+}
+.engText{
+    font-family: Arial, Helvetica, sans-serif;
+}
