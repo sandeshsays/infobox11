@@ -3,16 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use Database\Seeders\Calendar\MstFiscalYearTableSeeder;
-use Database\Seeders\MasterSettings\DistrictTableSeeder;
-use Database\Seeders\MasterSettings\LocalBodyTableSeeder;
-use Database\Seeders\MasterSettings\LocalBodyTypeTableSeeder;
-use Database\Seeders\MasterSettings\ProvinceTableSeeder;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Database\Seeders\MenuTableSeeder;
-
-
 
 class DatabaseSeeder extends Seeder
 {
@@ -33,6 +25,5 @@ class DatabaseSeeder extends Seeder
         $this->call(LocalBodyTypeTableSeeder::class);
         $this->call(LocalBodyTableSeeder::class);
         $this->call(MstFiscalYearTableSeeder::class);
-
     }
 }

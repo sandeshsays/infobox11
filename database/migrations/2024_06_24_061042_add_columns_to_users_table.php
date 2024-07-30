@@ -4,14 +4,18 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class() extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->unsignedBigInteger('role_id')->nullable();
+            $table->foreign('role_id')->references('id')->on('roles');
+            $table->unsignedBigInteger('client_id')->nullable();
+            $table->string('full_name_np')->nullable();
+            $table->string('full_name_en')->nullable();
             $table->string('mobile_no')->nullable();
             $table->string('login_user_name')->nullable();
             $table->text('address')->nullable();
@@ -31,9 +35,9 @@ return new class extends Migration
             $table->string('signature_pin')->nullable();
             $table->text('signature_image')->nullable();
             $table->text('signature_path')->nullable();
-            $table->unsignedInteger('created_by')->nullable(); 
+            $table->unsignedInteger('created_by')->nullable();
             $table->unsignedInteger('updated_by')->nullable();
-            $table->unsignedInteger('deleted_by')->nullable(); 
+            $table->unsignedInteger('deleted_by')->nullable();
         });
     }
 
@@ -43,7 +47,11 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->unsignedBigInteger('role_id')->nullable();
+            $table->foreign('role_id')->references('id')->on('roles');
+            $table->unsignedBigInteger('client_id')->nullable();
+            $table->string('full_name_np')->nullable();
+            $table->string('full_name_en')->nullable();
         });
     }
 };
